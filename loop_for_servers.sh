@@ -13,6 +13,7 @@ fi
 
 for server in $actual_file_name
 do
+echo $server
 	result=$(grep_search "$expect" "$server")
 	printf '### %s ###\n %s \n' "${server}" "${result}"
 done

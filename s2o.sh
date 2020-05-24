@@ -4,9 +4,6 @@
 #mode=$(
 symbolic2octal(){
         local symbolic_file="$1"
-
-        # local users=$(awk '$0=$2' "$symbolic_file")
-        # local groups=$(awk '$0=$3' "$symbolic_file")
         local perms
         perms=$(
                 awk '{print substr($1,2,9);}' "$symbolic_file"|                                    # パーミッション文字列抽出
@@ -15,16 +12,7 @@ symbolic2octal(){
                 tr 'STrwxst-' '00111110' |                                     # 残りは小文字ならビット立て
                 xargs printf 'ibase=2;%s\n' |                                  # 得られた文字列を2進数と見なし……
                 bc |                                                           # ……一旦10進数に変換
-                xargs  printf '%04o\n'
-        ) # 8進数化（4桁にゼロパディングしつつ）
-        # echo "$users"
-        # echo "$groups"
+                xargs  printf '%04o\n'                                         # 8進数化（4桁にゼロパディングしつつ）
+        ) 
         echo "$perms"
-        # paste <<< "$perms" <<< "$users" <<< "$groups" |column -t
 }
-
-# $fileに対して、あんなことこんなこと……
-
-# 復元
-#chmod $mode "$file"
-# symbolic2octal "$1"
