@@ -17,7 +17,7 @@ function grep_search(){
         #printf 'expect_file_name:%s\n actual_file_name:%s\n' "${expect}" "${actual}"
         #sdiff <(echo "$line") "$server"
         grep -xqs "${line}" "$server" \
-        && echo "○ ${line}" \
-        || echo "☓ ${line} ★　Not found exact match"
+        && echo "o ${line}" \
+        || echo "x ${line} ★　Not found exact match"
     done < <(echo "$ll")
 }
