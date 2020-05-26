@@ -23,6 +23,6 @@ source ./symbolic2octal.sh
 
 while read -r perm user group
 do
-    octet_perm=$(symbolic2octal "${perm}")
-    echo "[perm]${octet_perm} [user]${user} [group]${group}"
+    octal_perm=$(symbolic2octal "${perm}")
+    echo "[perm]${octal_perm} [user]${user} [group]${group}"
 done < "$file"

@@ -1,5 +1,11 @@
 #!/bin/bash
 
+################
+# Usage:
+# . s2o.sh;awk '$0=$1' real|symbolic2octal|cut -c 2-
+#
+################
+
 # パーミッション情報をchmodで使える8進数で保存
 #mode=$(
 symbolic2octal(){

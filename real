@@ -1,0 +1,5 @@
+-wxrwxrwrx	root	root	/
+dwxrwrxwrx	root	root	/a
+dwxrwrxwrx	root	root	/mmpf
+dwxrwrxwrx	root	root	/mmpf/GX
+d-wxrwrxwr	root	root	/mmpf/var/log

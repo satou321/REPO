@@ -1,0 +1,7 @@
+root	root	777	/
+root	root	733	/mmpf
+root	root	733	/mmpf/GX
+root	root	733	mmpf/GX/X
+7333	root	733	/mmpf/var/log
+7333	root	733	/mmpf/var/logX
+7333	root	733	/mmpf/var/log/Y
